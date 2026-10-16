@@ -1,0 +1,769 @@
+{
+  "tournamentInfo": {
+    "name": "Madras United FC Mobile Solo Championship",
+    "subtitle": "Official Solo Tournament • 2026 Season",
+    "adminPin": "1947",
+    "format": "groups_knockouts",
+    "rules": [
+      "Solo 1v1 FC Mobile matches.",
+      "Exclusive Team Selection: First-come, first-served. Once locked, no changes allowed.",
+      "Match duration: Standard 90 min (in-game). Extra Time & Penalties for Knockouts.",
+      "Both players must take a screenshot of the final score screen and submit to Admin.",
+      "Network disconnection rule: If disconnect happens before 30 mins, restart. If after 30 mins, current score stands."
+    ]
+  },
+  "teamSelection": {
+    "isLocked": false,
+    "scheduledOpenTime": null,
+    "unlockMessage": "Team Draft is LIVE!"
+  },
+  "players": [
+    {
+      "id": "p_demo_1",
+      "name": "Hariharan (Madras)",
+      "ign": "MadrasStriker",
+      "uid": "10928374",
+      "ovr": 104,
+      "whatsapp": "+91 9840012345",
+      "teamId": "realmadrid",
+      "teamName": "Real Madrid",
+      "teamBadge": "https://upload.wikimedia.org/wikipedia/en/5/56/Real_Madrid_CF.svg",
+      "teamColor": "#FEBE10",
+      "teamLeague": "La Liga",
+      "registeredAt": "2026-10-16T03:51:56.081Z",
+      "formattedRegisteredAt": "16 Oct 2026, 09:21:56 am",
+      "pickedAt": "2026-10-16T03:51:56.081Z",
+      "formattedPickedAt": "16 Oct 2026, 09:21:56 am",
+      "group": "Group B"
+    },
+    {
+      "id": "p_demo_2",
+      "name": "Karthik Raja",
+      "ign": "Karthi_FC",
+      "uid": "29837482",
+      "ovr": 103,
+      "whatsapp": "+91 9840112345",
+      "teamId": "mancity",
+      "teamName": "Manchester City",
+      "teamBadge": "https://upload.wikimedia.org/wikipedia/en/e/eb/Manchester_City_FC_badge.svg",
+      "teamColor": "#6CABDD",
+      "teamLeague": "Premier League",
+      "registeredAt": "2026-10-16T03:53:56.081Z",
+      "formattedRegisteredAt": "16 Oct 2026, 09:23:56 am",
+      "pickedAt": "2026-10-16T03:53:56.081Z",
+      "formattedPickedAt": "16 Oct 2026, 09:23:56 am",
+      "group": "Group B"
+    },
+    {
+      "id": "p_demo_3",
+      "name": "Sanjay Kumar",
+      "ign": "Sanju_Gamer",
+      "uid": "38472910",
+      "ovr": 102,
+      "whatsapp": "+91 9840212345",
+      "teamId": "arsenal",
+      "teamName": "Arsenal",
+      "teamBadge": "https://upload.wikimedia.org/wikipedia/en/5/53/Arsenal_FC.svg",
+      "teamColor": "#EF0107",
+      "teamLeague": "Premier League",
+      "registeredAt": "2026-10-16T03:55:56.082Z",
+      "formattedRegisteredAt": "16 Oct 2026, 09:25:56 am",
+      "pickedAt": "2026-10-16T03:55:56.082Z",
+      "formattedPickedAt": "16 Oct 2026, 09:25:56 am",
+      "group": "Group A"
+    },
+    {
+      "id": "p_demo_4",
+      "name": "Vignesh V",
+      "ign": "Vicky_V",
+      "uid": "47291038",
+      "ovr": 101,
+      "whatsapp": "+91 9840312345",
+      "teamId": "liverpool",
+      "teamName": "Liverpool",
+      "teamBadge": "https://upload.wikimedia.org/wikipedia/en/0/0c/Liverpool_FC.svg",
+      "teamColor": "#C8102E",
+      "teamLeague": "Premier League",
+      "registeredAt": "2026-10-16T03:57:56.082Z",
+      "formattedRegisteredAt": "16 Oct 2026, 09:27:56 am",
+      "pickedAt": "2026-10-16T03:57:56.082Z",
+      "formattedPickedAt": "16 Oct 2026, 09:27:56 am",
+      "group": "Group B"
+    },
+    {
+      "id": "p_demo_5",
+      "name": "Arun Prakash",
+      "ign": "Arun_Sniper",
+      "uid": "58291047",
+      "ovr": 100,
+      "whatsapp": "+91 9840412345",
+      "teamId": "barcelona",
+      "teamName": "FC Barcelona",
+      "teamBadge": "https://upload.wikimedia.org/wikipedia/en/4/47/FC_Barcelona_%28crest%29.svg",
+      "teamColor": "#A50044",
+      "teamLeague": "La Liga",
+      "registeredAt": "2026-10-16T03:59:56.082Z",
+      "formattedRegisteredAt": "16 Oct 2026, 09:29:56 am",
+      "pickedAt": "2026-10-16T03:59:56.082Z",
+      "formattedPickedAt": "16 Oct 2026, 09:29:56 am",
+      "group": "Group A"
+    },
+    {
+      "id": "p_demo_6",
+      "name": "Dinesh Babu",
+      "ign": "Dinesh_R10",
+      "uid": "69382019",
+      "ovr": 102,
+      "whatsapp": "+91 9840512345",
+      "teamId": "bayern",
+      "teamName": "Bayern Munich",
+      "teamBadge": "https://upload.wikimedia.org/wikipedia/commons/1/1b/FC_Bayern_M%C3%BCnchen_logo_%282017%29.svg",
+      "teamColor": "#DC052D",
+      "teamLeague": "Bundesliga",
+      "registeredAt": "2026-10-16T04:01:56.082Z",
+      "formattedRegisteredAt": "16 Oct 2026, 09:31:56 am",
+      "pickedAt": "2026-10-16T04:01:56.082Z",
+      "formattedPickedAt": "16 Oct 2026, 09:31:56 am",
+      "group": "Group B"
+    },
+    {
+      "id": "p_demo_7",
+      "name": "Mohamed Ashik",
+      "ign": "Ashik_CR7",
+      "uid": "70192837",
+      "ovr": 103,
+      "whatsapp": "+91 9840612345",
+      "teamId": "argentina",
+      "teamName": "Argentina",
+      "teamBadge": "https://upload.wikimedia.org/wikipedia/en/thumb/f/fc/Argentine_Football_Association_logo.svg/300px-Argentine_Football_Association_logo.svg.png",
+      "teamColor": "#75AADB",
+      "teamLeague": "International",
+      "registeredAt": "2026-10-16T04:03:56.082Z",
+      "formattedRegisteredAt": "16 Oct 2026, 09:33:56 am",
+      "pickedAt": "2026-10-16T04:03:56.082Z",
+      "formattedPickedAt": "16 Oct 2026, 09:33:56 am",
+      "group": "Group A"
+    },
+    {
+      "id": "p_demo_8",
+      "name": "Naveen Kumar",
+      "ign": "Naveen_GOAT",
+      "uid": "81029384",
+      "ovr": 99,
+      "whatsapp": "+91 9840712345",
+      "teamId": "france",
+      "teamName": "France",
+      "teamBadge": "https://upload.wikimedia.org/wikipedia/en/thumb/1/12/French_Football_Federation_logo.svg/300px-French_Football_Federation_logo.svg.png",
+      "teamColor": "#002654",
+      "teamLeague": "International",
+      "registeredAt": "2026-10-16T04:05:56.082Z",
+      "formattedRegisteredAt": "16 Oct 2026, 09:35:56 am",
+      "pickedAt": "2026-10-16T04:05:56.082Z",
+      "formattedPickedAt": "16 Oct 2026, 09:35:56 am",
+      "group": "Group A"
+    }
+  ],
+  "picks": {
+    "realmadrid": {
+      "playerId": "p_demo_1",
+      "playerName": "Hariharan (Madras)",
+      "playerIgn": "MadrasStriker",
+      "pickedAt": "2026-10-16T03:51:56.081Z",
+      "formattedTime": "16 Oct 2026, 09:21:56 am"
+    },
+    "mancity": {
+      "playerId": "p_demo_2",
+      "playerName": "Karthik Raja",
+      "playerIgn": "Karthi_FC",
+      "pickedAt": "2026-10-16T03:53:56.081Z",
+      "formattedTime": "16 Oct 2026, 09:23:56 am"
+    },
+    "arsenal": {
+      "playerId": "p_demo_3",
+      "playerName": "Sanjay Kumar",
+      "playerIgn": "Sanju_Gamer",
+      "pickedAt": "2026-10-16T03:55:56.082Z",
+      "formattedTime": "16 Oct 2026, 09:25:56 am"
+    },
+    "liverpool": {
+      "playerId": "p_demo_4",
+      "playerName": "Vignesh V",
+      "playerIgn": "Vicky_V",
+      "pickedAt": "2026-10-16T03:57:56.082Z",
+      "formattedTime": "16 Oct 2026, 09:27:56 am"
+    },
+    "barcelona": {
+      "playerId": "p_demo_5",
+      "playerName": "Arun Prakash",
+      "playerIgn": "Arun_Sniper",
+      "pickedAt": "2026-10-16T03:59:56.082Z",
+      "formattedTime": "16 Oct 2026, 09:29:56 am"
+    },
+    "bayern": {
+      "playerId": "p_demo_6",
+      "playerName": "Dinesh Babu",
+      "playerIgn": "Dinesh_R10",
+      "pickedAt": "2026-10-16T04:01:56.082Z",
+      "formattedTime": "16 Oct 2026, 09:31:56 am"
+    },
+    "argentina": {
+      "playerId": "p_demo_7",
+      "playerName": "Mohamed Ashik",
+      "playerIgn": "Ashik_CR7",
+      "pickedAt": "2026-10-16T04:03:56.082Z",
+      "formattedTime": "16 Oct 2026, 09:33:56 am"
+    },
+    "france": {
+      "playerId": "p_demo_8",
+      "playerName": "Naveen Kumar",
+      "playerIgn": "Naveen_GOAT",
+      "pickedAt": "2026-10-16T04:05:56.082Z",
+      "formattedTime": "16 Oct 2026, 09:35:56 am"
+    }
+  },
+  "rounds": [
+    {
+      "roundNumber": 1,
+      "roundName": "Group A - Round 1",
+      "stage": "Group A",
+      "matches": [
+        {
+          "id": "match_group_a_r1_m1_1792123676083_htm4",
+          "stage": "Group A",
+          "round": 1,
+          "roundName": "Group A - Round 1",
+          "homePlayerId": "p_demo_8",
+          "homePlayerName": "Naveen Kumar",
+          "homeIgn": "Naveen_GOAT",
+          "homeTeamId": "france",
+          "homeTeamName": "France",
+          "homeTeamBadge": "https://upload.wikimedia.org/wikipedia/en/thumb/1/12/French_Football_Federation_logo.svg/300px-French_Football_Federation_logo.svg.png",
+          "awayPlayerId": "p_demo_5",
+          "awayPlayerName": "Arun Prakash",
+          "awayIgn": "Arun_Sniper",
+          "awayTeamId": "barcelona",
+          "awayTeamName": "FC Barcelona",
+          "awayTeamBadge": "https://upload.wikimedia.org/wikipedia/en/4/47/FC_Barcelona_%28crest%29.svg",
+          "homeScore": 3,
+          "awayScore": 1,
+          "status": "completed",
+          "scorers": [
+            {
+              "player": "Mbappé",
+              "goals": 2,
+              "side": "home",
+              "ign": "Naveen_GOAT",
+              "teamName": "France"
+            },
+            {
+              "player": "Vinicius Jr",
+              "goals": 1,
+              "side": "home",
+              "ign": "Naveen_GOAT",
+              "teamName": "France"
+            },
+            {
+              "player": "Haaland",
+              "goals": 1,
+              "side": "away",
+              "ign": "Arun_Sniper",
+              "teamName": "FC Barcelona"
+            }
+          ],
+          "cleanSheets": {
+            "home": false,
+            "away": false
+          },
+          "completedAt": "2026-10-16T04:07:56.083Z",
+          "proofUrl": "",
+          "formattedCompletedAt": "16 Oct 2026, 09:37:56 am"
+        },
+        {
+          "id": "match_group_a_r1_m2_1792123676083_qb8t",
+          "stage": "Group A",
+          "round": 1,
+          "roundName": "Group A - Round 1",
+          "homePlayerId": "p_demo_7",
+          "homePlayerName": "Mohamed Ashik",
+          "homeIgn": "Ashik_CR7",
+          "homeTeamId": "argentina",
+          "homeTeamName": "Argentina",
+          "homeTeamBadge": "https://upload.wikimedia.org/wikipedia/en/thumb/f/fc/Argentine_Football_Association_logo.svg/300px-Argentine_Football_Association_logo.svg.png",
+          "awayPlayerId": "p_demo_3",
+          "awayPlayerName": "Sanjay Kumar",
+          "awayIgn": "Sanju_Gamer",
+          "awayTeamId": "arsenal",
+          "awayTeamName": "Arsenal",
+          "awayTeamBadge": "https://upload.wikimedia.org/wikipedia/en/5/53/Arsenal_FC.svg",
+          "homeScore": 2,
+          "awayScore": 0,
+          "status": "completed",
+          "scorers": [
+            {
+              "player": "Saka",
+              "goals": 2,
+              "side": "home",
+              "ign": "Ashik_CR7",
+              "teamName": "Argentina"
+            }
+          ],
+          "cleanSheets": {
+            "home": true,
+            "away": false
+          },
+          "completedAt": "2026-10-16T04:07:56.084Z",
+          "proofUrl": "",
+          "formattedCompletedAt": "16 Oct 2026, 09:37:56 am"
+        }
+      ]
+    },
+    {
+      "roundNumber": 2,
+      "roundName": "Group A - Round 2",
+      "stage": "Group A",
+      "matches": [
+        {
+          "id": "match_group_a_r2_m1_1792123676083_q6pu",
+          "stage": "Group A",
+          "round": 2,
+          "roundName": "Group A - Round 2",
+          "homePlayerId": "p_demo_3",
+          "homePlayerName": "Sanjay Kumar",
+          "homeIgn": "Sanju_Gamer",
+          "homeTeamId": "arsenal",
+          "homeTeamName": "Arsenal",
+          "homeTeamBadge": "https://upload.wikimedia.org/wikipedia/en/5/53/Arsenal_FC.svg",
+          "awayPlayerId": "p_demo_8",
+          "awayPlayerName": "Naveen Kumar",
+          "awayIgn": "Naveen_GOAT",
+          "awayTeamId": "france",
+          "awayTeamName": "France",
+          "awayTeamBadge": "https://upload.wikimedia.org/wikipedia/en/thumb/1/12/French_Football_Federation_logo.svg/300px-French_Football_Federation_logo.svg.png",
+          "homeScore": null,
+          "awayScore": null,
+          "status": "upcoming",
+          "scorers": [],
+          "cleanSheets": {
+            "home": false,
+            "away": false
+          },
+          "completedAt": null,
+          "proofUrl": ""
+        },
+        {
+          "id": "match_group_a_r2_m2_1792123676083_lo4u",
+          "stage": "Group A",
+          "round": 2,
+          "roundName": "Group A - Round 2",
+          "homePlayerId": "p_demo_5",
+          "homePlayerName": "Arun Prakash",
+          "homeIgn": "Arun_Sniper",
+          "homeTeamId": "barcelona",
+          "homeTeamName": "FC Barcelona",
+          "homeTeamBadge": "https://upload.wikimedia.org/wikipedia/en/4/47/FC_Barcelona_%28crest%29.svg",
+          "awayPlayerId": "p_demo_7",
+          "awayPlayerName": "Mohamed Ashik",
+          "awayIgn": "Ashik_CR7",
+          "awayTeamId": "argentina",
+          "awayTeamName": "Argentina",
+          "awayTeamBadge": "https://upload.wikimedia.org/wikipedia/en/thumb/f/fc/Argentine_Football_Association_logo.svg/300px-Argentine_Football_Association_logo.svg.png",
+          "homeScore": null,
+          "awayScore": null,
+          "status": "upcoming",
+          "scorers": [],
+          "cleanSheets": {
+            "home": false,
+            "away": false
+          },
+          "completedAt": null,
+          "proofUrl": ""
+        }
+      ]
+    },
+    {
+      "roundNumber": 3,
+      "roundName": "Group A - Round 3",
+      "stage": "Group A",
+      "matches": [
+        {
+          "id": "match_group_a_r3_m1_1792123676083_9bmd",
+          "stage": "Group A",
+          "round": 3,
+          "roundName": "Group A - Round 3",
+          "homePlayerId": "p_demo_8",
+          "homePlayerName": "Naveen Kumar",
+          "homeIgn": "Naveen_GOAT",
+          "homeTeamId": "france",
+          "homeTeamName": "France",
+          "homeTeamBadge": "https://upload.wikimedia.org/wikipedia/en/thumb/1/12/French_Football_Federation_logo.svg/300px-French_Football_Federation_logo.svg.png",
+          "awayPlayerId": "p_demo_7",
+          "awayPlayerName": "Mohamed Ashik",
+          "awayIgn": "Ashik_CR7",
+          "awayTeamId": "argentina",
+          "awayTeamName": "Argentina",
+          "awayTeamBadge": "https://upload.wikimedia.org/wikipedia/en/thumb/f/fc/Argentine_Football_Association_logo.svg/300px-Argentine_Football_Association_logo.svg.png",
+          "homeScore": null,
+          "awayScore": null,
+          "status": "upcoming",
+          "scorers": [],
+          "cleanSheets": {
+            "home": false,
+            "away": false
+          },
+          "completedAt": null,
+          "proofUrl": ""
+        },
+        {
+          "id": "match_group_a_r3_m2_1792123676083_5045",
+          "stage": "Group A",
+          "round": 3,
+          "roundName": "Group A - Round 3",
+          "homePlayerId": "p_demo_3",
+          "homePlayerName": "Sanjay Kumar",
+          "homeIgn": "Sanju_Gamer",
+          "homeTeamId": "arsenal",
+          "homeTeamName": "Arsenal",
+          "homeTeamBadge": "https://upload.wikimedia.org/wikipedia/en/5/53/Arsenal_FC.svg",
+          "awayPlayerId": "p_demo_5",
+          "awayPlayerName": "Arun Prakash",
+          "awayIgn": "Arun_Sniper",
+          "awayTeamId": "barcelona",
+          "awayTeamName": "FC Barcelona",
+          "awayTeamBadge": "https://upload.wikimedia.org/wikipedia/en/4/47/FC_Barcelona_%28crest%29.svg",
+          "homeScore": null,
+          "awayScore": null,
+          "status": "upcoming",
+          "scorers": [],
+          "cleanSheets": {
+            "home": false,
+            "away": false
+          },
+          "completedAt": null,
+          "proofUrl": ""
+        }
+      ]
+    },
+    {
+      "roundNumber": 1,
+      "roundName": "Group B - Round 1",
+      "stage": "Group B",
+      "matches": [
+        {
+          "id": "match_group_b_r1_m1_1792123676083_h3of",
+          "stage": "Group B",
+          "round": 1,
+          "roundName": "Group B - Round 1",
+          "homePlayerId": "p_demo_1",
+          "homePlayerName": "Hariharan (Madras)",
+          "homeIgn": "MadrasStriker",
+          "homeTeamId": "realmadrid",
+          "homeTeamName": "Real Madrid",
+          "homeTeamBadge": "https://upload.wikimedia.org/wikipedia/en/5/56/Real_Madrid_CF.svg",
+          "awayPlayerId": "p_demo_6",
+          "awayPlayerName": "Dinesh Babu",
+          "awayIgn": "Dinesh_R10",
+          "awayTeamId": "bayern",
+          "awayTeamName": "Bayern Munich",
+          "awayTeamBadge": "https://upload.wikimedia.org/wikipedia/commons/1/1b/FC_Bayern_M%C3%BCnchen_logo_%282017%29.svg",
+          "homeScore": null,
+          "awayScore": null,
+          "status": "upcoming",
+          "scorers": [],
+          "cleanSheets": {
+            "home": false,
+            "away": false
+          },
+          "completedAt": null,
+          "proofUrl": ""
+        },
+        {
+          "id": "match_group_b_r1_m2_1792123676083_fcwk",
+          "stage": "Group B",
+          "round": 1,
+          "roundName": "Group B - Round 1",
+          "homePlayerId": "p_demo_2",
+          "homePlayerName": "Karthik Raja",
+          "homeIgn": "Karthi_FC",
+          "homeTeamId": "mancity",
+          "homeTeamName": "Manchester City",
+          "homeTeamBadge": "https://upload.wikimedia.org/wikipedia/en/e/eb/Manchester_City_FC_badge.svg",
+          "awayPlayerId": "p_demo_4",
+          "awayPlayerName": "Vignesh V",
+          "awayIgn": "Vicky_V",
+          "awayTeamId": "liverpool",
+          "awayTeamName": "Liverpool",
+          "awayTeamBadge": "https://upload.wikimedia.org/wikipedia/en/0/0c/Liverpool_FC.svg",
+          "homeScore": null,
+          "awayScore": null,
+          "status": "upcoming",
+          "scorers": [],
+          "cleanSheets": {
+            "home": false,
+            "away": false
+          },
+          "completedAt": null,
+          "proofUrl": ""
+        }
+      ]
+    },
+    {
+      "roundNumber": 2,
+      "roundName": "Group B - Round 2",
+      "stage": "Group B",
+      "matches": [
+        {
+          "id": "match_group_b_r2_m1_1792123676083_fdjr",
+          "stage": "Group B",
+          "round": 2,
+          "roundName": "Group B - Round 2",
+          "homePlayerId": "p_demo_4",
+          "homePlayerName": "Vignesh V",
+          "homeIgn": "Vicky_V",
+          "homeTeamId": "liverpool",
+          "homeTeamName": "Liverpool",
+          "homeTeamBadge": "https://upload.wikimedia.org/wikipedia/en/0/0c/Liverpool_FC.svg",
+          "awayPlayerId": "p_demo_1",
+          "awayPlayerName": "Hariharan (Madras)",
+          "awayIgn": "MadrasStriker",
+          "awayTeamId": "realmadrid",
+          "awayTeamName": "Real Madrid",
+          "awayTeamBadge": "https://upload.wikimedia.org/wikipedia/en/5/56/Real_Madrid_CF.svg",
+          "homeScore": null,
+          "awayScore": null,
+          "status": "upcoming",
+          "scorers": [],
+          "cleanSheets": {
+            "home": false,
+            "away": false
+          },
+          "completedAt": null,
+          "proofUrl": ""
+        },
+        {
+          "id": "match_group_b_r2_m2_1792123676083_1b38",
+          "stage": "Group B",
+          "round": 2,
+          "roundName": "Group B - Round 2",
+          "homePlayerId": "p_demo_6",
+          "homePlayerName": "Dinesh Babu",
+          "homeIgn": "Dinesh_R10",
+          "homeTeamId": "bayern",
+          "homeTeamName": "Bayern Munich",
+          "homeTeamBadge": "https://upload.wikimedia.org/wikipedia/commons/1/1b/FC_Bayern_M%C3%BCnchen_logo_%282017%29.svg",
+          "awayPlayerId": "p_demo_2",
+          "awayPlayerName": "Karthik Raja",
+          "awayIgn": "Karthi_FC",
+          "awayTeamId": "mancity",
+          "awayTeamName": "Manchester City",
+          "awayTeamBadge": "https://upload.wikimedia.org/wikipedia/en/e/eb/Manchester_City_FC_badge.svg",
+          "homeScore": null,
+          "awayScore": null,
+          "status": "upcoming",
+          "scorers": [],
+          "cleanSheets": {
+            "home": false,
+            "away": false
+          },
+          "completedAt": null,
+          "proofUrl": ""
+        }
+      ]
+    },
+    {
+      "roundNumber": 3,
+      "roundName": "Group B - Round 3",
+      "stage": "Group B",
+      "matches": [
+        {
+          "id": "match_group_b_r3_m1_1792123676083_w3sb",
+          "stage": "Group B",
+          "round": 3,
+          "roundName": "Group B - Round 3",
+          "homePlayerId": "p_demo_1",
+          "homePlayerName": "Hariharan (Madras)",
+          "homeIgn": "MadrasStriker",
+          "homeTeamId": "realmadrid",
+          "homeTeamName": "Real Madrid",
+          "homeTeamBadge": "https://upload.wikimedia.org/wikipedia/en/5/56/Real_Madrid_CF.svg",
+          "awayPlayerId": "p_demo_2",
+          "awayPlayerName": "Karthik Raja",
+          "awayIgn": "Karthi_FC",
+          "awayTeamId": "mancity",
+          "awayTeamName": "Manchester City",
+          "awayTeamBadge": "https://upload.wikimedia.org/wikipedia/en/e/eb/Manchester_City_FC_badge.svg",
+          "homeScore": null,
+          "awayScore": null,
+          "status": "upcoming",
+          "scorers": [],
+          "cleanSheets": {
+            "home": false,
+            "away": false
+          },
+          "completedAt": null,
+          "proofUrl": ""
+        },
+        {
+          "id": "match_group_b_r3_m2_1792123676083_z125",
+          "stage": "Group B",
+          "round": 3,
+          "roundName": "Group B - Round 3",
+          "homePlayerId": "p_demo_4",
+          "homePlayerName": "Vignesh V",
+          "homeIgn": "Vicky_V",
+          "homeTeamId": "liverpool",
+          "homeTeamName": "Liverpool",
+          "homeTeamBadge": "https://upload.wikimedia.org/wikipedia/en/0/0c/Liverpool_FC.svg",
+          "awayPlayerId": "p_demo_6",
+          "awayPlayerName": "Dinesh Babu",
+          "awayIgn": "Dinesh_R10",
+          "awayTeamId": "bayern",
+          "awayTeamName": "Bayern Munich",
+          "awayTeamBadge": "https://upload.wikimedia.org/wikipedia/commons/1/1b/FC_Bayern_M%C3%BCnchen_logo_%282017%29.svg",
+          "homeScore": null,
+          "awayScore": null,
+          "status": "upcoming",
+          "scorers": [],
+          "cleanSheets": {
+            "home": false,
+            "away": false
+          },
+          "completedAt": null,
+          "proofUrl": ""
+        }
+      ]
+    },
+    {
+      "roundNumber": 100,
+      "roundName": "Knockout Stages",
+      "stage": "Knockouts",
+      "matches": [
+        {
+          "id": "ko_semi_1_1792123676083",
+          "stage": "Semi-Final",
+          "round": 100,
+          "roundName": "Semi-Final 1",
+          "homePlayerId": "TBD",
+          "homePlayerName": "Group A Winner (1st)",
+          "homeIgn": "TBD",
+          "homeTeamId": "",
+          "homeTeamName": "TBD",
+          "awayPlayerId": "TBD",
+          "awayPlayerName": "Group B Runner-up (2nd)",
+          "awayIgn": "TBD",
+          "awayTeamId": "",
+          "awayTeamName": "TBD",
+          "homeScore": null,
+          "awayScore": null,
+          "status": "upcoming",
+          "scorers": [],
+          "cleanSheets": {
+            "home": false,
+            "away": false
+          },
+          "isKnockout": true,
+          "nextMatchId": "ko_final_1792123676083",
+          "nextMatchSlot": "home"
+        },
+        {
+          "id": "ko_semi_2_1792123676083",
+          "stage": "Semi-Final",
+          "round": 100,
+          "roundName": "Semi-Final 2",
+          "homePlayerId": "TBD",
+          "homePlayerName": "Group B Winner (1st)",
+          "homeIgn": "TBD",
+          "homeTeamId": "",
+          "homeTeamName": "TBD",
+          "awayPlayerId": "TBD",
+          "awayPlayerName": "Group A Runner-up (2nd)",
+          "awayIgn": "TBD",
+          "awayTeamId": "",
+          "awayTeamName": "TBD",
+          "homeScore": null,
+          "awayScore": null,
+          "status": "upcoming",
+          "scorers": [],
+          "cleanSheets": {
+            "home": false,
+            "away": false
+          },
+          "isKnockout": true,
+          "nextMatchId": "ko_final_1792123676083",
+          "nextMatchSlot": "away"
+        },
+        {
+          "id": "ko_final_1792123676083",
+          "stage": "Grand Final",
+          "round": 101,
+          "roundName": "Grand Final 🏆",
+          "homePlayerId": "TBD",
+          "homePlayerName": "Winner Semi-Final 1",
+          "homeIgn": "TBD",
+          "homeTeamId": "",
+          "homeTeamName": "TBD",
+          "awayPlayerId": "TBD",
+          "awayPlayerName": "Winner Semi-Final 2",
+          "awayIgn": "TBD",
+          "awayTeamId": "",
+          "awayTeamName": "TBD",
+          "homeScore": null,
+          "awayScore": null,
+          "status": "upcoming",
+          "scorers": [],
+          "cleanSheets": {
+            "home": false,
+            "away": false
+          },
+          "isKnockout": true
+        }
+      ]
+    }
+  ],
+  "auditLog": [
+    {
+      "id": "log_1792123676086_5a5k",
+      "timestamp": "2026-10-16T04:07:56.086Z",
+      "formattedTime": "16 Oct 2026, 09:37:56 am",
+      "message": "Demo tournament populated with 8 players & live matches!",
+      "meta": {}
+    },
+    {
+      "id": "log_1792123645239_0nvz",
+      "timestamp": "2026-10-16T04:07:25.239Z",
+      "formattedTime": "16 Oct 2026, 09:37:25 am",
+      "message": "TEAM PICKED: Hariharan (Hari_MUFC) selected Arsenal at 16 Oct 2026, 09:37:25 am",
+      "meta": {
+        "playerId": "p_1792123631895_hedo6",
+        "teamId": "arsenal"
+      }
+    },
+    {
+      "id": "log_1792123639956_1rbp",
+      "timestamp": "2026-10-16T04:07:19.956Z",
+      "formattedTime": "16 Oct 2026, 09:37:19 am",
+      "message": "New player registered: Rohan (Rohan_FC)",
+      "meta": {
+        "playerId": "p_1792123639954_0cnkk"
+      }
+    },
+    {
+      "id": "log_1792123632159_84mk",
+      "timestamp": "2026-10-16T04:07:12.159Z",
+      "formattedTime": "16 Oct 2026, 09:37:12 am",
+      "message": "TEAM PICKED: Hariharan (Hari_MUFC) selected Arsenal at 16 Oct 2026, 09:37:12 am",
+      "meta": {
+        "playerId": "p_1792123631895_hedo6",
+        "teamId": "arsenal"
+      }
+    },
+    {
+      "id": "log_1792123632058_df47",
+      "timestamp": "2026-10-16T04:07:12.058Z",
+      "formattedTime": "16 Oct 2026, 09:37:12 am",
+      "message": "New player registered: Hariharan (Hari_MUFC)",
+      "meta": {
+        "playerId": "p_1792123631895_hedo6"
+      }
+    }
+  ]
+}

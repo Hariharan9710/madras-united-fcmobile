@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Madras United | FC Mobile Solo Tournament</title>
+  
+  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- App Wrapper (Mobile View Frame) -->
+  <div class="app-container">
+    
+    <!-- HEADER -->
+    <header class="app-header">
+      <div class="brand-wrapper">
+        <div class="brand-crest">
+          <i class="fa-solid fa-futbol"></i>
+        </div>
+        <div>
+          <div class="brand-title">Madras <span>United</span></div>
+          <div class="brand-sub">FC Mobile Solo Championship</div>
+        </div>
+      </div>
+      <div class="header-actions">
+        <div class="live-badge">
+          <span class="pulse-dot"></span>
+          <span>LIVE SYNC</span>
+        </div>
+        <button id="headerAdminBtn" class="btn-header-admin" title="Admin Dashboard">
+          <i class="fa-solid fa-shield-halved"></i>
+          <span id="adminHeaderLabel">ADMIN</span>
+        </button>
+      </div>
+    </header>
+
+    <!-- TOURNAMENT SUMMARY STRIP -->
+    <div class="tournament-bar">
+      <div class="stat-chip">
+        <i class="fa-solid fa-users"></i>
+        <span>Registered: <strong id="playerCountChip">0</strong> Players</span>
+      </div>
+      <div class="format-chip" id="currentFormatBadge">Group Stage</div>
+    </div>
+
+    <!-- MAIN TABS CONTAINER -->
+    <main id="mainContent">
+
+      <!-- ==============================================
+           TAB 1: HOME & REGISTRATION
+      =============================================== -->
+      <section id="tab-home" class="tab-content active">
+        <!-- Hero Banner -->
+        <div class="hero-banner">
+          <span class="hero-tag">Official Solo Tournament</span>
+          <h1 class="hero-heading" id="heroTournamentName">Madras United Championship</h1>
+          <p class="hero-sub" id="heroTournamentSub">Exclusive Team Draft • Live Standings • Golden Boot & Glove</p>
+          
+          <!-- Countdown Box for Team Draft -->
+          <div id="draftCountdownBox" class="countdown-container" style="display: none;">
+            <div class="countdown-label">
+              <i class="fa-solid fa-clock"></i>
+              <span id="countdownTitle">Team Selection Opens In:</span>
+            </div>
+            <div class="countdown-digits">
+              <div class="countdown-unit">
+                <span class="number" id="cdHours">00</span>
+                <span class="label">Hours</span>
+              </div>
+              <div class="countdown-unit">
+                <span class="number" id="cdMinutes">00</span>
+                <span class="label">Mins</span>
+              </div>
+              <div class="countdown-unit">
+                <span class="number" id="cdSeconds">00</span>
+                <span class="label">Secs</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Player Registration Card -->
+        <div class="card" id="registrationCard">
+          <div class="card-title">
+            <span><i class="fa-solid fa-user-plus"></i> Player Registration</span>
+            <span class="live-badge" id="regStatusPill">OPEN</span>
+          </div>
+          <form id="registrationForm">
+            <div class="form-group">
+              <label class="form-label">Full Name / Nickname *</label>
+              <input type="text" id="regName" class="form-input" placeholder="e.g. Hariharan" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label">FC Mobile In-Game Name (IGN) *</label>
+              <input type="text" id="regIgn" class="form-input" placeholder="e.g. MadrasStriker" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label">FC Mobile User ID (UID)</label>
+              <input type="text" id="regUid" class="form-input" placeholder="e.g. 10928374 (Found in FC Mobile profile)">
+            </div>
+            <div class="form-group">
+              <label class="form-label">Team OVR Rating</label>
+              <input type="number" id="regOvr" class="form-input" placeholder="e.g. 102" min="60" max="120">
+            </div>
+            <div class="form-group">
+              <label class="form-label">WhatsApp Number (For Match Coordination)</label>
+              <input type="tel" id="regWhatsapp" class="form-input" placeholder="e.g. +91 98401 23456">
+            </div>
+            <button type="submit" class="btn btn-primary" id="btnSubmitRegister">
+              <i class="fa-solid fa-check-circle"></i> Register For Tournament
+            </button>
+          </form>
+        </div>
+
+        <!-- Registered Players List -->
+        <div class="card">
+          <div class="card-title">
+            <span><i class="fa-solid fa-clipboard-list"></i> Registered Players (<span id="registeredCount">0</span>)</span>
+            <button class="btn-secondary" style="padding: 2px 8px; font-size: 11px;" id="btnShareLink">
+              <i class="fa-solid fa-share-nodes"></i> Share Link
+            </button>
+          </div>
+          <div id="playersListContainer">
+            <p style="color: var(--text-muted); font-size: 13px; text-align: center; padding: 12px;">No players registered yet. Be the first!</p>
+          </div>
+        </div>
+
+        <!-- Activity & Proof Log -->
+        <div class="card">
+          <div class="card-title">
+            <span><i class="fa-solid fa-shield-cat"></i> Live Activity & Timestamp Proofs</span>
+          </div>
+          <div id="auditLogContainer">
+            <p style="color: var(--text-muted); font-size: 12px;">Live feed will display registered players and locked team picks here.</p>
+          </div>
+        </div>
+
+        <!-- Official Rules Card -->
+        <div class="card">
+          <div class="card-title">
+            <span><i class="fa-solid fa-book-bookmark"></i> Official Rules</span>
+          </div>
+          <ul id="rulesList" style="padding-left: 20px; color: var(--text-muted); font-size: 13px; line-height: 1.6;">
+            <li>Solo 1v1 FC Mobile matches.</li>
+            <li>Exclusive Team Selection: First-come, first-served. Once a team is locked, no one else can choose it.</li>
+            <li>Exact timestamps recorded for transparency and dispute prevention.</li>
+            <li>Admin updates match results, Golden Boot & Golden Glove automatically.</li>
+          </ul>
+        </div>
+      </section>
+
+
+      <!-- ==============================================
+           TAB 2: TEAM SELECTION (EXCLUSIVE DRAFT)
+      =============================================== -->
+      <section id="tab-teams" class="tab-content">
+        <div class="card" style="background: rgba(14, 20, 36, 0.95); margin-bottom: 12px;">
+          <div class="card-title" style="margin-bottom: 6px;">
+            <span><i class="fa-solid fa-shield"></i> Exclusive Team Draft</span>
+            <span class="badge-available" id="draftStatusBadge">DRAFT OPEN</span>
+          </div>
+          <p style="font-size: 12px; color: var(--text-muted); margin-bottom: 8px;">
+            <i class="fa-solid fa-circle-info" style="color: var(--cyan-neon);"></i>
+            Each team can only be picked by <strong>ONE player</strong>. Exact timestamp is locked as proof.
+          </p>
+
+          <!-- Search & League Filters -->
+          <div class="form-group" style="margin-bottom: 8px;">
+            <input type="text" id="teamSearchInput" class="form-input" placeholder="🔍 Search club or country (e.g. Arsenal, Real Madrid, Argentina)...">
+          </div>
+
+          <div class="league-tabs">
+            <button class="league-tab-btn active" data-league="ALL">All Leagues</button>
+            <button class="league-tab-btn" data-league="Premier League">Premier League</button>
+            <button class="league-tab-btn" data-league="La Liga">La Liga</button>
+            <button class="league-tab-btn" data-league="Bundesliga">Bundesliga</button>
+            <button class="league-tab-btn" data-league="Serie A">Serie A</button>
+            <button class="league-tab-btn" data-league="International">International</button>
+          </div>
+        </div>
+
+        <!-- Teams Grid List -->
+        <div class="teams-grid" id="teamsGridContainer">
+          <!-- Dynamically populated -->
+        </div>
+      </section>
+
+
+      <!-- ==============================================
+           TAB 3: FIXTURES & MATCH RESULTS
+      =============================================== -->
+      <section id="tab-fixtures" class="tab-content">
+        <div class="card" style="margin-bottom: 12px;">
+          <div class="card-title">
+            <span><i class="fa-solid fa-trophy"></i> Match Schedule & Results</span>
+            <span class="live-badge" id="fixturesCountBadge">0 MATCHES</span>
+          </div>
+          <p style="font-size: 12px; color: var(--text-muted);">
+            Round-by-round fixtures. Admin posts scores with goalscorers to update points table instantly.
+          </p>
+        </div>
+
+        <!-- Fixtures Filter Pills -->
+        <div class="league-tabs" style="margin-bottom: 14px;">
+          <button class="league-tab-btn active" data-fixfilter="ALL">All Matches</button>
+          <button class="league-tab-btn" data-fixfilter="UPCOMING">Upcoming</button>
+          <button class="league-tab-btn" data-fixfilter="COMPLETED">Completed</button>
+          <button class="league-tab-btn" data-fixfilter="KNOCKOUTS">Knockouts</button>
+        </div>
+
+        <!-- Fixtures Container -->
+        <div id="fixturesListContainer">
+          <p style="text-align: center; color: var(--text-muted); padding: 30px 10px;">
+            No fixtures generated yet. Admin will generate fixtures once team selection is locked!
+          </p>
+        </div>
+      </section>
+
+
+      <!-- ==============================================
+           TAB 4: POINTS TABLE / STANDINGS
+      =============================================== -->
+      <section id="tab-standings" class="tab-content">
+        <div class="card" style="margin-bottom: 12px;">
+          <div class="card-title">
+            <span><i class="fa-solid fa-list-ol"></i> Tournament Standings</span>
+            <span class="live-badge">AUTO-CALC</span>
+          </div>
+          <p style="font-size: 12px; color: var(--text-muted);">
+            Top 2 positions qualify for Knockout Semifinals. Points: <strong>Win = 3</strong>, <strong>Draw = 1</strong>, <strong>Loss = 0</strong>.
+          </p>
+          
+          <!-- Group Selector Tabs (if Group Format) -->
+          <div class="league-tabs" id="standingsGroupTabs" style="margin-top: 10px; margin-bottom: 0;">
+            <button class="league-tab-btn active" data-group="OVERALL">Overall Table</button>
+          </div>
+        </div>
+
+        <div class="standings-table-container">
+          <table class="standings-table">
+            <thead>
+              <tr>
+                <th style="width: 28px;">#</th>
+                <th style="text-align: left; padding-left: 8px;">Player / Team</th>
+                <th>P</th>
+                <th>W</th>
+                <th>D</th>
+                <th>L</th>
+                <th>GD</th>
+                <th>PTS</th>
+                <th>Form</th>
+              </tr>
+            </thead>
+            <tbody id="standingsTableBody">
+              <tr>
+                <td colspan="9" style="padding: 24px; color: var(--text-muted);">
+                  Standings will automatically calculate as matches are played.
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+
+      <!-- ==============================================
+           TAB 5: TOP STATS (GOLDEN BOOT & GLOVE)
+      =============================================== -->
+      <section id="tab-stats" class="tab-content">
+        <!-- Sub Tabs -->
+        <div class="league-tabs" style="margin-bottom: 14px;">
+          <button class="league-tab-btn active" id="btnStatsBoot">⚽ Golden Boot (Top Scorers)</button>
+          <button class="league-tab-btn" id="btnStatsGlove">🧤 Golden Glove (Clean Sheets)</button>
+        </div>
+
+        <!-- Golden Boot Leaderboard -->
+        <div id="goldenBootSection">
+          <div class="card" style="margin-bottom: 12px;">
+            <div class="card-title">
+              <span><i class="fa-solid fa-shoe-prints" style="color: var(--gold-accent);"></i> Golden Boot Leaderboard</span>
+              <span class="format-chip">GOALSCORERS</span>
+            </div>
+            <p style="font-size: 12px; color: var(--text-muted);">
+              Player with the most goals scored across all tournament matches wins the Golden Boot trophy!
+            </p>
+          </div>
+          <div id="goldenBootListContainer">
+            <p style="text-align: center; color: var(--text-muted); padding: 20px;">No goals recorded yet.</p>
+          </div>
+        </div>
+
+        <!-- Golden Glove Leaderboard -->
+        <div id="goldenGloveSection" style="display: none;">
+          <div class="card" style="margin-bottom: 12px;">
+            <div class="card-title">
+              <span><i class="fa-solid fa-mitten" style="color: var(--cyan-neon);"></i> Golden Glove Leaderboard</span>
+              <span class="format-chip">CLEAN SHEETS</span>
+            </div>
+            <p style="font-size: 12px; color: var(--text-muted);">
+              Player / Team with the most clean sheets (zero goals conceded) wins the Golden Glove!
+            </p>
+          </div>
+          <div id="goldenGloveListContainer">
+            <p style="text-align: center; color: var(--text-muted); padding: 20px;">No clean sheets recorded yet.</p>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- ==============================================
+           TAB 6: ADMIN CONTROL DASHBOARD
+      =============================================== -->
+      <section id="tab-admin" class="tab-content">
+        <!-- PIN Verification Overlay Card (if not logged in) -->
+        <div class="card" id="adminLoginCard">
+          <div class="card-title">
+            <span><i class="fa-solid fa-lock"></i> Admin Authentication</span>
+          </div>
+          <p style="font-size: 13px; color: var(--text-muted); margin-bottom: 12px;">
+            Enter Admin PIN to manage tournament, lock team draft, generate fixtures, and post match results.
+          </p>
+          <form id="adminLoginForm">
+            <div class="form-group">
+              <label class="form-label">Admin PIN (Default: 1947)</label>
+              <input type="password" id="adminPinInput" class="form-input" placeholder="Enter PIN..." required>
+            </div>
+            <button type="submit" class="btn btn-primary">
+              <i class="fa-solid fa-unlock"></i> Unlock Admin Panel
+            </button>
+          </form>
+        </div>
+
+        <!-- Admin Control Panel (Visible when logged in) -->
+        <div id="adminPanelArea" style="display: none;">
+          
+          <!-- Quick Demo & Live Actions -->
+          <div class="card" style="border: 1px solid var(--primary-neon);">
+            <div class="card-title">
+              <span><i class="fa-solid fa-bolt" style="color: var(--primary-neon);"></i> Quick Actions</span>
+              <button class="btn-secondary" id="btnAdminLogout" style="width: auto; padding: 4px 10px; font-size: 11px;">
+                <i class="fa-solid fa-right-from-bracket"></i> Lock Panel
+              </button>
+            </div>
+            <p style="font-size: 12px; color: var(--text-muted); margin-bottom: 12px;">
+              Instantly test the full tournament workflow with 1 click:
+            </p>
+            <div style="display: flex; gap: 8px;">
+              <button class="btn btn-primary" id="btnSeedDemo" style="font-size: 12px; padding: 8px 12px;">
+                <i class="fa-solid fa-wand-magic-sparkles"></i> Load 8-Player Demo
+              </button>
+              <button class="btn btn-secondary" id="btnResetAll" style="font-size: 12px; padding: 8px 12px; color: var(--danger-red);">
+                <i class="fa-solid fa-trash-can"></i> Reset Data
+              </button>
+            </div>
+          </div>
+
+          <!-- Section A: Team Draft Lock & Schedule Timer -->
+          <div class="card">
+            <div class="card-title">
+              <span><i class="fa-solid fa-stopwatch"></i> Team Draft Lock & Countdown Timer</span>
+            </div>
+            <p style="font-size: 12px; color: var(--text-muted); margin-bottom: 12px;">
+              Lock team picks or set a scheduled unlock time (e.g., Opens at 6:00 PM).
+            </p>
+            <div class="form-group">
+              <label class="form-label">Draft Status</label>
+              <select id="adminDraftLockSelect" class="form-select">
+                <option value="OPEN">🟢 Draft Open (Anyone can pick now)</option>
+                <option value="LOCKED">🔴 Draft Locked (No one can pick)</option>
+                <option value="SCHEDULED">⏰ Scheduled Countdown Timer</option>
+              </select>
+            </div>
+            <div class="form-group" id="adminScheduleGroup" style="display: none;">
+              <label class="form-label">Scheduled Unlock Date & Time</label>
+              <input type="datetime-local" id="adminScheduleInput" class="form-input">
+            </div>
+            <button class="btn btn-primary" id="btnSaveDraftSettings">
+              <i class="fa-solid fa-floppy-disk"></i> Update Draft Settings
+            </button>
+          </div>
+
+          <!-- Section B: Tournament Format & Fixture Generator -->
+          <div class="card">
+            <div class="card-title">
+              <span><i class="fa-solid fa-dice"></i> Format & Random Fixture Generator</span>
+            </div>
+            <p style="font-size: 12px; color: var(--text-muted); margin-bottom: 12px;">
+              Choose format and automatically generate randomized balanced fixtures for all registered players:
+            </p>
+            <div class="form-group">
+              <label class="form-label">Tournament Format</label>
+              <select id="adminFormatSelect" class="form-select">
+                <option value="groups_knockouts">Group Stage (2 Groups) ➔ Knockout Semifinals & Final</option>
+                <option value="league">Premier League Style (Single League Table - All vs All)</option>
+                <option value="multistage">Multi-Stage (Group Stage ➔ Super League ➔ Finals)</option>
+              </select>
+            </div>
+            <button class="btn btn-primary" id="btnGenerateFixtures">
+              <i class="fa-solid fa-shuffle"></i> Generate Random Fixtures
+            </button>
+          </div>
+
+          <!-- Section C: Enter Match Result -->
+          <div class="card">
+            <div class="card-title">
+              <span><i class="fa-solid fa-pen-to-square"></i> Post Match Result</span>
+            </div>
+            <p style="font-size: 12px; color: var(--text-muted); margin-bottom: 12px;">
+              Select a fixture to enter the score, log goalscorers (Golden Boot), and clean sheets (Golden Glove):
+            </p>
+            <div class="form-group">
+              <label class="form-label">Select Match</label>
+              <select id="adminMatchSelect" class="form-select">
+                <option value="">-- Choose Match --</option>
+              </select>
+            </div>
+            <div style="display: flex; gap: 8px; margin-bottom: 12px;">
+              <div style="flex: 1;">
+                <label class="form-label" id="lblHomeTeam">Home Score</label>
+                <input type="number" id="adminHomeScore" class="form-input" placeholder="0" min="0">
+              </div>
+              <div style="flex: 1;">
+                <label class="form-label" id="lblAwayTeam">Away Score</label>
+                <input type="number" id="adminAwayScore" class="form-input" placeholder="0" min="0">
+              </div>
+            </div>
+
+            <!-- Scorers Logger -->
+            <div class="form-group">
+              <label class="form-label">Goal Scorers (Format: Player, Goals e.g. "Mbappe 2, Saka 1")</label>
+              <input type="text" id="adminScorersInput" class="form-input" placeholder="e.g. Haaland 2, Foden 1">
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Clean Sheet Awarded To</label>
+              <select id="adminCleanSheetSelect" class="form-select">
+                <option value="auto">Auto-determine (if score is 0)</option>
+                <option value="home">Home Goalkeeper Only</option>
+                <option value="away">Away Goalkeeper Only</option>
+                <option value="none">Neither</option>
+              </select>
+            </div>
+
+            <button class="btn btn-primary" id="btnSubmitMatchResult">
+              <i class="fa-solid fa-check"></i> Save Result & Update Standings
+            </button>
+          </div>
+
+          <!-- Section D: Manage Players -->
+          <div class="card">
+            <div class="card-title">
+              <span><i class="fa-solid fa-users-gear"></i> Manage Registered Players</span>
+            </div>
+            <div id="adminPlayersManagerList">
+              <!-- Populated dynamically -->
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+    </main>
+
+    <!-- ==============================================
+         BOTTOM NAVIGATION BAR (MOBILE APP FEEL)
+    =============================================== -->
+    <nav class="bottom-nav">
+      <button class="nav-btn active" data-tab="tab-home">
+        <i class="fa-solid fa-house"></i>
+        <span>Home</span>
+      </button>
+      <button class="nav-btn" data-tab="tab-teams">
+        <i class="fa-solid fa-shield"></i>
+        <span>Pick Team</span>
+      </button>
+      <button class="nav-btn" data-tab="tab-fixtures">
+        <i class="fa-solid fa-futbol"></i>
+        <span>Fixtures</span>
+      </button>
+      <button class="nav-btn" data-tab="tab-standings">
+        <i class="fa-solid fa-table-list"></i>
+        <span>Table</span>
+      </button>
+      <button class="nav-btn" data-tab="tab-stats">
+        <i class="fa-solid fa-trophy"></i>
+        <span>Stats</span>
+      </button>
+    </nav>
+
+  </div>
+
+  <!-- ==============================================
+       MODALS
+  =============================================== -->
+
+  <!-- Modal: Pick Team Confirmation -->
+  <div class="modal-overlay" id="pickTeamModal">
+    <div class="modal-card">
+      <button class="modal-close-btn" id="btnClosePickModal"><i class="fa-solid fa-xmark"></i></button>
+      <div style="text-align: center; margin-bottom: 16px;">
+        <img id="modalTeamBadge" src="" style="width: 64px; height: 64px; object-fit: contain; margin-bottom: 8px;">
+        <h3 id="modalTeamName" style="color: #fff; font-size: 18px; text-transform: uppercase;">Team Name</h3>
+        <span class="badge-available" id="modalTeamLeague">League</span>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label">Select Your Registered Name *</label>
+        <select id="modalPlayerSelect" class="form-select">
+          <option value="">-- Choose your registered player --</option>
+        </select>
+        <small style="color: var(--text-muted); font-size: 11px; margin-top: 4px; display: block;">
+          Haven't registered yet? Go to Home tab to register first!
+        </small>
+      </div>
+
+      <div style="background: rgba(0, 240, 255, 0.08); border: 1px solid rgba(0, 240, 255, 0.2); border-radius: var(--radius-sm); padding: 10px; margin-bottom: 14px; font-size: 12px; color: var(--text-muted);">
+        <i class="fa-solid fa-lock" style="color: var(--cyan-neon);"></i>
+        Once you confirm, this team is <strong>exclusively locked</strong> to you with an exact timestamp proof.
+      </div>
+
+      <button class="btn btn-primary" id="btnConfirmPickTeam">
+        <i class="fa-solid fa-lock"></i> Lock In This Team
+      </button>
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div class="toast" id="toastNotice">Notification</div>
+
+  <!-- Scripts -->
+  <script src="js/teams-data.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
